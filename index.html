@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="MARKET PIEMONTE — catalogo abbigliamento, scarpe e accessori. Contattaci su Instagram.">
+  <title>MARKET PIEMONTE | Catalogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b0b;--panel:#151515;--panel2:#1d1d1d;--text:#f6f3ee;--muted:#a7a29b;--accent:#c9a46a;--line:#2b2926}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#0b0b0bed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:800;letter-spacing:.13em;font-size:18px}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:22px;color:#d4d0c9;font-size:13px}.navlinks a:hover{color:var(--accent)}
+    .insta{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font-weight:700;font-size:12px;letter-spacing:.04em;transition:.2s}
+    .insta:hover{background:var(--accent);color:#111}
+    .hero{padding:76px 0 48px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#3b2c1a55,transparent 62%)}
+    .eyebrow{color:var(--accent);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:700}
+    h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(42px,7vw,76px);line-height:1.04;margin:18px 0 14px;letter-spacing:.02em}
+    .hero p{color:var(--muted);max-width:560px;margin:0 auto 27px;line-height:1.7;font-size:14px}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .primary{background:var(--accent);color:#111;border:1px solid var(--accent);padding:13px 22px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em}
+    .secondary{border:1px solid #575047;color:#eee;padding:13px 22px;border-radius:999px;font-size:12px;font-weight:700}
+    section{padding:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}
+    .section-head h2{font-family:"Playfair Display",Georgia,serif;font-size:30px;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
+    .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .gallery-item{height:170px;border-radius:18px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s}.gallery-item:hover img{transform:scale(1.06)}
+    .toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:24px 0}
+    .search{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:13px 16px;border-radius:12px;min-width:min(100%,280px);outline:none;font:inherit;font-size:13px}
+    .search:focus{border-color:var(--accent)}.filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{border:1px solid var(--line);background:transparent;color:#d8d3ca;border-radius:999px;padding:9px 13px;font:inherit;font-size:11px;cursor:pointer}
+    .filter.active,.filter:hover{background:var(--accent);border-color:var(--accent);color:#111;font-weight:800}
+    .category{margin:36px 0 44px;scroll-margin-top:95px}.category-title{display:flex;align-items:center;gap:14px;margin-bottom:17px}
+    .category-title h3{font-family:"Playfair Display",Georgia,serif;font-size:25px;margin:0}.category-title:after{content:"";height:1px;background:var(--line);flex:1}
+    .count{font-size:10px;color:var(--accent);letter-spacing:.1em}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .product{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:16px;min-height:72px;display:flex;align-items:center;gap:12px;transition:.2s}
+    .product:hover{border-color:#806743;transform:translateY(-2px)}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+    .product-name{font-size:13px;font-weight:600;line-height:1.4}.empty{color:var(--muted);font-size:13px;padding:22px 0}
+    .contact{margin:30px auto 70px;padding:42px 25px;border:1px solid #4c3e2b;border-radius:22px;text-align:center;background:linear-gradient(135deg,#1a1712,#111)}
+    .contact h2{font-family:"Playfair Display",Georgia,serif;font-size:34px;margin:0 0 10px}.contact p{color:var(--muted);font-size:13px;margin:0 auto 22px;max-width:470px;line-height:1.7}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:#827d75;font-size:11px;text-align:center;letter-spacing:.08em}
+    @media(max-width:850px){.gallery{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}}
+    @media(max-width:600px){.nav{height:65px}.brand{font-size:15px}.nav .insta{padding:9px 12px;font-size:10px}.hero{padding:58px 0 34px}.gallery{grid-template-columns:repeat(3,1fr);gap:8px}.gallery-item{height:125px;border-radius:13px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.product{padding:13px 11px;min-height:65px}.product-name{font-size:12px}.section-head h2{font-size:26px}.contact h2{font-size:29px}}
+    @media(max-width:370px){.gallery{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">MARKET <span>PIEMONTE</span></a>
+    <nav class="navlinks"><a href="#collezione">Collezione</a><a href="#catalogo">Categorie</a><a href="#contatti">Contatti</a></nav>
+    <a class="insta" href="https://www.instagram.com/market_piemonte/" target="_blank" rel="noopener">◎ Instagram</a>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="eyebrow">Stile • Selezione • Collezione</div>
+    <h1>MARKET<br><span style="color:var(--accent)">PIEMONTE</span></h1>
+    <p>Scopri la nostra selezione di abbigliamento, scarpe e accessori. Esplora le categorie e contattaci per informazioni sui prodotti.</p>
+    <div class="hero-actions"><a class="primary" href="#catalogo">SCOPRI IL CATALOGO</a><a class="secondary" href="https://www.instagram.com/market_piemonte/" target="_blank" rel="noopener">CONTATTACI</a></div>
+  </div>
+
+  <section class="wrap" id="collezione">
+    <div class="section-head"><div><h2>In evidenza</h2><p>Una selezione di articoli dal catalogo</p></div></div>
+    <div class="gallery">
+      <a class="gallery-item" href="#giacche" aria-label="Giacche"><img src="assets/giacca-canada-goose.jpg" alt="Giacca invernale"></a>
+      <a class="gallery-item" href="#completi" aria-label="Completi"><img src="assets/completo-dsq2.jpg" alt="Completo denim"></a>
+      <a class="gallery-item" href="#cinture" aria-label="Cinture"><img src="assets/cintura-fendi.jpg" alt="Cintura"></a>
+      <a class="gallery-item" href="#scarpe" aria-label="Scarpe"><img src="assets/scarpe-mcqueen.jpg" alt="Scarpe"></a>
+      <a class="gallery-item" href="#cappelli" aria-label="Cappelli"><img src="assets/cappelli-canada-goose-lacoste-moncler.jpg" alt="Cappelli"></a>
+      <a class="gallery-item" href="#cappelli" aria-label="Cappelli"><img src="assets/cappelli-gucci.jpg" alt="Cappelli fantasia"></a>
+      <a class="gallery-item" href="#scarpe" aria-label="Scarpe"><img src="assets/scarpe-louis-vuitton.jpg" alt="Sneakers"></a>
+      <a class="gallery-item" href="#giacche" aria-label="Piumini"><img src="assets/piumino-ralph-lauren.jpg" alt="Piumino nero"></a>
+      <a class="gallery-item" href="#tute" aria-label="Tute"><img src="assets/tuta-lacoste.jpg" alt="Tuta"></a>
+      <a class="gallery-item" href="#cappelli" aria-label="Cappelli"><img src="assets/cappelli-louis-vuitton.jpg" alt="Cappelli invernali"></a>
+      <a class="gallery-item" href="#accessori" aria-label="Borse"><img src="assets/borsa-prada.jpg" alt="Borsa nera"></a>
+      <a class="gallery-item" href="#scarpe" aria-label="Scarpe"><img src="assets/scarpe-bianche.jpg" alt="Sneakers bianche"></a>
+      <a class="gallery-item" href="#giacche" aria-label="Giacche"><img src="assets/giubbotti-blaauer.jpg" alt="Giacche imbottite"></a>
+    </div>
+  </section>
+
+  <section class="wrap" id="catalogo">
+    <div class="section-head"><div><h2>Il catalogo</h2><p>Seleziona una categoria o cerca un articolo</p></div></div>
+    <div class="toolbar">
+      <input class="search" id="search" type="search" placeholder="Cerca un prodotto o una marca..." aria-label="Cerca prodotti">
+      <div class="filters" id="filters"></div>
+    </div>
+    <div id="catalog"></div>
+  </section>
+
+  <section class="wrap" id="contatti">
+    <div class="contact">
+      <div class="eyebrow">Hai trovato quello che cerchi?</div>
+      <h2>Parliamone su Instagram</h2>
+      <p>Per informazioni, disponibilità e dettagli sui prodotti, scrivici direttamente sul nostro profilo.</p>
+      <a class="primary" href="https://www.instagram.com/market_piemonte/" target="_blank" rel="noopener">◎ &nbsp; @MARKET_PIEMONTE</a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> MARKET PIEMONTE · Tutti i diritti riservati</div></footer>
+<script>
+const catalog = [
+ {id:"tute",name:"TUTE",items:["Tuta Polo Ralph Lauren","Tuta Lacoste","Tuta Moncler","Tuta Palm Angels","Tuta Stone Island","Tuta Prada logo B/N","Tuta Canada Goose","Tuta CP Company"]},
+ {id:"giacche",name:"GIACCHE",items:["Blauer normale uomo","Blauer con pelliccia uomo","Blauer normale donna","Giacca Canada Goose","Giacca Moncler","Piumino Nike lungo","Piumino Nike corto","Giubbotto Stone Island","Giacca a vento Stone Island","Giacca a vento Blauer","Piumino Ralph Lauren","Piumino Lacoste","Piumino Stone Island"]},
+ {id:"smanicati",name:"SMANICATI",items:["Smanicato Moncler","Smanicato Canada Goose","Smanicato Blauer","Smanicato Blauer con pelliccia","Smanicato Armani"]},
+ {id:"felpe",name:"FELPE",items:["Felpa Stone Island","Felpa Lacoste","Felpa Ralph Lauren","Felpa Moncler","Felpa Canada Goose"]},
+ {id:"jeans",name:"JEANS",items:["Jeans DSQ2 blu","Jeans DSQ2 nero","Jeans DSQ2 azzurro","Jeans DSQ2 grigio"]},
+ {id:"maglie",name:"MAGLIE",items:["Maglione Stone Island","Maglione Ralph Lauren","Maglione Lacoste","Maglione Moncler","Maglione Prada","Maglione Canada Goose"]},
+ {id:"magliette",name:"MAGLIETTE",items:["Maglietta Ralph Lauren","Maglietta Lacoste","Maglietta Prada","Maglietta Stone Island","Maglietta Canada Goose"]},
+ {id:"completi",name:"COMPLETI",items:["Completo DSQ2 blu"]},
+ {id:"cappelli",name:"CAPPELLI",items:["Cappello Canada Goose","Cappello Stone Island","Cappello Prada","Cappello Ralph Lauren","Cappello Lacoste","Cappello Moncler"]},
+ {id:"scarpe",name:"SCARPE",items:["LV Skate","McQueen","Balenciaga","Nike Nocta","Air Max 95","Air Max 97","Air Max 270","Air Force 1","Air Force 3"]},
+ {id:"cinture",name:"CINTURE",items:["Louis Vuitton","Hermès","Kelly 18","Gucci","Ferragamo"]},
+ {id:"accessori",name:"ALTRI ACCESSORI",items:["Borse e accessori disponibili su richiesta"]}
+];
+const filters=document.getElementById("filters"), root=document.getElementById("catalog"), search=document.getElementById("search");
+let active="TUTTE";
+function render(){
+ const q=search.value.trim().toLocaleLowerCase("it");
+ filters.innerHTML="";
+ ["TUTTE",...catalog.map(c=>c.name)].forEach(name=>{
+  const b=document.createElement("button");b.className="filter"+(active===name?" active":"");b.textContent=name;
+  b.onclick=()=>{active=name;render()};filters.appendChild(b);
+ });
+ root.innerHTML="";
+ const groups=catalog.filter(c=>(active==="TUTTE"||c.name===active)&&c.items.some(x=>x.toLocaleLowerCase("it").includes(q)));
+ if(!groups.length){root.innerHTML='<p class="empty">Nessun prodotto trovato. Prova un’altra ricerca.</p>';return}
+ groups.forEach(c=>{
+  const sec=document.createElement("section");sec.className="category";sec.id=c.id;
+  const title=document.createElement("div");title.className="category-title";
+  title.innerHTML=`<h3>${c.name}</h3><span class="count">${c.items.filter(x=>x.toLocaleLowerCase("it").includes(q)).length} ARTICOLI</span>`;
+  const grid=document.createElement("div");grid.className="products";
+  c.items.filter(x=>x.toLocaleLowerCase("it").includes(q)).forEach(item=>{
+   const card=document.createElement("div");card.className="product";
+   const dot=document.createElement("span");dot.className="dot";
+   const label=document.createElement("span");label.className="product-name";label.textContent=item;
+   card.append(dot,label);grid.appendChild(card);
+  });
+  sec.append(title,grid);root.appendChild(sec);
+ });
+}
+search.addEventListener("input",render);
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>

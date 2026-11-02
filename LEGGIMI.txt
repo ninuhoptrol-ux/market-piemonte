@@ -1,0 +1,15 @@
+MARKET PIEMONTE — sito web
+
+COME APRIRE
+1. Estrai il file ZIP.
+2. Apri la cartella market_piemonte.
+3. Fai doppio clic su index.html: il sito si apre nel browser.
+
+PUBBLICAZIONE ONLINE
+Carica index.html e la cartella assets sul tuo hosting mantenendo la stessa struttura.
+
+MODIFICHE
+Il catalogo e i filtri si trovano nella parte finale di index.html, nell'array JavaScript chiamato catalog.
+Il collegamento Instagram è già impostato su https://www.instagram.com/market_piemonte/.
+
+Nota: le immagini sono quelle inviate in chat, escluse l'immagine con l'elenco scritto e la schermata del vecchio sito.
